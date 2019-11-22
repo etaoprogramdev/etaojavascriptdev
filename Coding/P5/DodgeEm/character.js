@@ -1,5 +1,4 @@
 class Character {
-
   constructor(x, y, g, v, l, xp, bspawn) {
     //Local variables (access via 'name'.symbol e.g.character.velocity)
     this.gravity = g;
@@ -44,45 +43,55 @@ class Character {
 
   startphysics() {
     //Trigger physics system
-    if (key == ' ') {
+    if (key == " ") {
       this.startgame = true;
     }
     //If triggered, engine turns on
     if (this.startgame == true) {
       this.velocity += this.gravity;
       this.y += this.velocity;
-      this.score += this.xp;  
+      this.score += this.xp;
       //Leveling system
       if (character.score >= 1000) {
         this.blockspe = -2;
-      } 
+      }
       if (character.score >= 2000) {
         this.blockspe = -3;
-      } 
+      }
       if (character.score >= 3000) {
         this.blockspe = -4;
-        this.bspawn += 0;
-      }    
+      }
       if (character.score >= 4000) {
+        this.blockspe = -5;
+      }
+      if (character.score >= 5000) {
+        this.blockspe = -6;
+      }
+      if (character.score >= 6000) {
+        this.blockspe = -6;
+      }
+      if (character.score >= 7000) {
+        this.blockspe = -7;
+      }
+      if (character.score >= 8000) {
+        this.blockspe = -8;
+      }
+      if (character.score >= 9000) {
+        this.blockspe = -9;
+      }
+      if (character.score >= 10000) {
         this.blockspe = -10;
-        this.bspawn += 0;
-      }       
-            if (character.score >= 5000) {
-        this.blockspe = -10;
-        this.bspawn += 0.001;
-      }   
-      
+      }
     } else {
       this.velocity = 0;
     }
-
+    console.log(this.lift);
   }
 
   control() {
     //Lift system
     if (this.startgame == true) {
       this.velocity -= this.lift;
-    } 
+    }
   }
-
 }

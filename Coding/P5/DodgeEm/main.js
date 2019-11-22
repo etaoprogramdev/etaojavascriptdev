@@ -18,12 +18,12 @@ let l = 6;
 
 function preload() {
   //Load media library
-  charsprite = loadImage('Media/Idle.png');
-  charsprite2 = loadImage('Media/Lift.png');
-  meteorsprite = loadImage('Media/Meteor.png ');
-  menu1 = loadImage('Media/Start.png');
-  menu2 = loadImage('Media/End.png');
-  arcadefont = loadFont('Media/Normfont.ttf');
+  charsprite = loadImage("Media/Idle.png");
+  charsprite2 = loadImage("Media/Lift.png");
+  meteorsprite = loadImage("Media/Meteor.png ");
+  menu1 = loadImage("Media/Start.png");
+  menu2 = loadImage("Media/End.png");
+  arcadefont = loadFont("Media/Normfont.ttf");
 }
 
 function setup() {
@@ -33,8 +33,9 @@ function setup() {
   //Initiate Menu system
   menu = new Menu(width / 2, height / 2, 360, 360);
   end = new End(width / 2, height / 2, 360, 360);
+  createP("&nbsp");
+  createP("How to play: Dodge the meteors by propelling or falling!");
 }
-
 
 function draw() {
   //Draw Backdrop
@@ -49,7 +50,7 @@ function draw() {
     for (n = 0; n < stars.length; n++) {
       stars[n].show();
       if (stars[n].x > 800) {
-       stars.splice(n, 1); 
+        stars.splice(n, 1);
       }
     }
     //Initiate physics
@@ -70,7 +71,7 @@ function draw() {
         //Leveling reference point
         blockers[i].x += character.blockspe;
         if (blockers[i].x < 0) {
-          blockers.splice(i, 1); 
+          blockers.splice(i, 1);
         }
       }
     }
@@ -97,31 +98,29 @@ function draw() {
     textSize(20);
     strokeWeight(1);
     textFont(arcadefont);
-    text('Prev: '+globalscore, 20, 95);
+    text("Prev: " + globalscore, 20, 95);
   }
 
-//End system
-if (character.reset == true || reset == true) {
-  end.show();
-  blockers.splice(0, blockers.length);
-  stars.splice(0, stars.length);
-  globalstart = false;
-}
-
-
-//Save Score system
-if (globalstart == false) {
-  globalscore = character.score;
+  //End system
+  if (character.reset == true || reset == true) {
+    end.show();
+    blockers.splice(0, blockers.length);
+    stars.splice(0, stars.length);
+    globalstart = false;
   }
-  
-//Draw watermark
+
+  //Save Score system
+  if (globalstart == false) {
+    globalscore = character.score;
+  }
+
+  //Draw watermark
   fill(255);
   stroke(255);
   textSize(15);
   strokeWeight(1);
   textFont(arcadefont);
-  text('© 2019 realetao & Studio Ezorical', 10, 390);
-  
+  text("© 2019 realetao & Studio Ezorical", 10, 390);
 }
 
 function keyPressed() {
@@ -133,17 +132,16 @@ function keyPressed() {
   }
 
   //Start game via key press
-  if (key == ' ') {
+  if (key == " ") {
     character.control();
     character.jumped = true;
   }
   return false;
 }
 
-
 function keyReleased() {
   //Swap load system
-  if (key == ' ') {
+  if (key == " ") {
     character.jumped = false;
   }
   return false;
