@@ -67,7 +67,7 @@ body {
   font-weight: 100;
 }
 title {
-  font-family: 'Bebas';
+  font-family: 'Bebas Neue', cursive;
   letter-spacing: 5px;
 }
 
@@ -90,10 +90,11 @@ a:hover img {
 h2 {
   margin-bottom: 15px;
   color: #000000;
-  font-family: 'Bebas';
+  font-family: 'Bebas Neue', cursive;
   font-size: 22px;
   font-weight: 100;
   line-height: 1em;
+  letter-spacing: 5px;
 }
 div.paragraph,
 div.paragraph {
