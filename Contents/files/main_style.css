@@ -46,13 +46,31 @@ body {
   height: 100%;
   background: #ffffff;
   color: #3e3e3e;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: 'Roboto';
+  src: url(files/Roboto-Light.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url(files/Bebas-Regular.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+title {
+  font-family: 'Bebas' !important;
+  letter-spacing: 5px !important;
+}
+
 a {
   color: #b9b9b9;
   text-decoration: none;
@@ -72,10 +90,10 @@ a:hover img {
 h2 {
   margin-bottom: 15px;
   color: #000000;
-  font-family: "Quattrocento", serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.2em;
+  font-family: 'Bebas';
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1em;
 }
 div.paragraph,
 div.paragraph {
@@ -101,8 +119,8 @@ blockquote {
 :-ms-input-placeholder {
   color: #777777;
 }
-input[type="text"],
-input[type="email"],
+input[type='text'],
+input[type='email'],
 textarea {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -112,8 +130,8 @@ textarea {
   appearance: none;
   text-shadow: none;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
+input[type='text']:focus,
+input[type='email']:focus,
 textarea:focus {
   border: 1px solid #777777;
 }
@@ -125,12 +143,12 @@ select {
   -moz-appearance: none;
   appearance: none;
   text-indent: 0.01px;
-  text-overflow: "";
+  text-overflow: '';
 }
-.wsite-form-field input[type="radio"],
-.wsite-form-field input[type="checkbox"],
-.wsite-com-product-option-groups input[type="radio"],
-.wsite-com-product-option-groups input[type="checkbox"] {
+.wsite-form-field input[type='radio'],
+.wsite-form-field input[type='checkbox'],
+.wsite-com-product-option-groups input[type='radio'],
+.wsite-com-product-option-groups input[type='checkbox'] {
   width: 16px;
   height: 16px;
   border: 1px solid #444444 !important;
@@ -142,31 +160,31 @@ select {
   appearance: none;
   text-shadow: none;
 }
-.wsite-form-field input[type="radio"],
-.wsite-com-product-option-groups input[type="radio"] {
+.wsite-form-field input[type='radio'],
+.wsite-com-product-option-groups input[type='radio'] {
   border-radius: 8px;
 }
-.wsite-form-field input[type="checkbox"],
-.wsite-com-product-option-groups input[type="checkbox"] {
+.wsite-form-field input[type='checkbox'],
+.wsite-com-product-option-groups input[type='checkbox'] {
   background-color: #ffffff;
   border-radius: 0;
 }
-.wsite-form-field input[type="radio"]:after,
-.wsite-com-product-option-groups input[type="radio"]:after {
+.wsite-form-field input[type='radio']:after,
+.wsite-com-product-option-groups input[type='radio']:after {
   display: block;
   border-radius: 8px;
   box-sizing: border-box;
-  content: "";
+  content: '';
 }
-.wsite-form-field input[type="radio"]:checked:after,
-.wsite-com-product-option-groups input[type="radio"]:checked:after {
+.wsite-form-field input[type='radio']:checked:after,
+.wsite-com-product-option-groups input[type='radio']:checked:after {
   background: #444444;
   border: 2px solid #ffffff;
   width: 14px;
   height: 14px;
 }
-.wsite-form-field input[type="checkbox"]:after,
-.wsite-com-product-option-groups input[type="checkbox"]:after {
+.wsite-form-field input[type='checkbox']:after,
+.wsite-com-product-option-groups input[type='checkbox']:after {
   position: relative;
   top: 1px;
   left: 4px;
@@ -180,10 +198,10 @@ select {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.wsite-form-field input[type="checkbox"]:checked:after,
-.wsite-com-product-option-groups input[type="checkbox"]:checked:after {
+.wsite-form-field input[type='checkbox']:checked:after,
+.wsite-com-product-option-groups input[type='checkbox']:checked:after {
   display: block;
-  content: " ";
+  content: ' ';
 }
 .container {
   overflow: hidden;
@@ -225,7 +243,7 @@ body.affix .cento-header .nav-wrap {
   color: #000000;
   text-align: center;
   letter-spacing: 0.04em;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 40px;
   font-weight: 700;
   line-height: normal;
@@ -261,7 +279,7 @@ body.affix .cento-header .nav-wrap {
   color: #b9b9b9;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   line-height: 19px;
@@ -306,8 +324,8 @@ body.affix .cento-header .nav-wrap {
 #wsite-menus .wsite-menu-arrow:before {
   display: block;
   color: #b9b9b9;
-  content: "\203A";
-  font-family: "Quattrocento Sans", sans-serif;
+  content: '\203A';
+  font-family: 'Roboto';
   font-size: 24px;
   font-weight: normal;
   line-height: 11px;
@@ -341,7 +359,7 @@ body.affix .cento-header .nav-wrap {
   min-height: 100%;
   height: inherit;
   background: rgba(0, 0, 0, 0.2);
-  content: " ";
+  content: ' ';
 }
 .wsite-section-bg-color:before {
   display: none;
@@ -366,14 +384,14 @@ body.affix .cento-header .nav-wrap {
 }
 .banner-wrap .banner div.paragraph {
   margin-bottom: 25px;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
 }
 .banner-wrap .banner p {
   margin-bottom: 25px;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -494,7 +512,7 @@ body.affix .cento-header .nav-wrap {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   white-space: normal;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 14px;
   font-weight: 700;
   line-height: normal;
@@ -511,7 +529,7 @@ body.affix .cento-header .nav-wrap {
 .wsite-button-large .wsite-button-inner,
 .wsite-editor .wsite-button-large .wsite-button-inner {
   padding: 12px 16px;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
@@ -556,7 +574,7 @@ body.affix .cento-header .nav-wrap {
   display: inline-block;
   padding: 10px 0 5px;
   color: #333333;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 16px;
   font-weight: normal;
   line-height: normal;
@@ -575,7 +593,7 @@ body.affix .cento-header .nav-wrap {
   color: #444444;
   border: 1px solid #b9b9b9;
   border-radius: 1px;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
@@ -600,7 +618,7 @@ body.affix .cento-header .nav-wrap {
   color: #333333;
   border: 1px solid #b9b9b9;
   border-radius: 1px;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
@@ -689,7 +707,7 @@ body.affix .cento-header .nav-wrap {
   color: #ffffff;
   letter-spacing: normal;
   text-shadow: none;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -702,7 +720,7 @@ body.affix .cento-header .nav-wrap {
 }
 .fancybox-title {
   color: #ffffff;
-  font-family: "Quattrocento", serif;
+  font-family: 'Quattrocento', serif;
   font-size: 15px;
   font-weight: normal;
   line-height: normal;
@@ -718,7 +736,7 @@ body.affix .cento-header .nav-wrap {
 .fancybox-next span:before,
 .fancybox-prev span:before {
   color: #ffffff !important;
-  font-family: "Quattrocento", serif;
+  font-family: 'Quattrocento', serif;
   font-size: 50px;
   font-weight: normal;
   line-height: 0.5em;
@@ -734,17 +752,17 @@ body.affix .cento-header .nav-wrap {
   color: #b9b9b9 !important;
 }
 .fancybox-prev span:before {
-  content: "\3008";
+  content: '\3008';
 }
 .fancybox-next span:before {
-  content: "\3009";
+  content: '\3009';
 }
 .fancybox-close {
   top: 20px;
   right: 20px;
 }
 .fancybox-close:before {
-  content: "\00D7";
+  content: '\00D7';
 }
 .header-page .wsite-header-section {
   height: 65vh;
@@ -794,7 +812,7 @@ body.affix .cento-header .nav-wrap {
 #blogTable .blog-sidebar p {
   margin-bottom: 20px;
 }
-#commentPostDiv .field input[type="text"],
+#commentPostDiv .field input[type='text'],
 #commentPostDiv .field textarea {
   padding: 8px 12px;
   background: transparent;
@@ -808,7 +826,7 @@ body.affix .cento-header .nav-wrap {
   border-radius: 1px;
   text-transform: uppercase;
   white-space: normal;
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: 'Roboto';
   font-size: 14px;
   font-weight: 700;
   line-height: normal;
@@ -958,7 +976,7 @@ h2#wsite-com-product-title {
 .wsite-com-checkout-section .wsite-form-field .select2-container {
   height: 40px;
 }
-.wsite-com-checkout-section .wsite-form-field input[type="radio"] {
+.wsite-com-checkout-section .wsite-form-field input[type='radio'] {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -1102,7 +1120,7 @@ h2#wsite-com-product-title {
     width: 22px;
     height: 2px;
     background: #3e3e3e;
-    content: "";
+    content: '';
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -ms-transition: all 300ms ease;
@@ -1209,7 +1227,7 @@ h2#wsite-com-product-title {
     display: block;
     color: #b9b9b9;
     font-size: 24px;
-    content: "\203A";
+    content: '\203A';
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -1341,7 +1359,7 @@ h2#wsite-com-product-title {
     box-sizing: border-box;
     text-align: center;
     text-transform: uppercase;
-    content: "VIEW ALL CATEGORIES \25be";
+    content: 'VIEW ALL CATEGORIES \25be';
     font-weight: 700;
     cursor: pointer;
   }
@@ -1371,7 +1389,7 @@ h2#wsite-com-product-title {
     cursor: default !important;
   }
   #wsite-com-store .wsite-com-sidebar.sidebar-expanded:before {
-    content: "CLOSE \25b4";
+    content: 'CLOSE \25b4';
   }
   #wsite-com-store .wsite-com-sidebar.sidebar-expanded #wsite-com-hierarchy {
     max-height: 100vh;
@@ -1430,7 +1448,7 @@ h2#wsite-com-product-title {
     box-sizing: border-box;
     text-align: center;
     text-transform: uppercase;
-    content: "VIEW SEARCH FILTERS \25be";
+    content: 'VIEW SEARCH FILTERS \25be';
     font-weight: 700;
   }
   #wsite-search-sidebar.sidebar-expanded {
@@ -1438,7 +1456,7 @@ h2#wsite-com-product-title {
     cursor: default !important;
   }
   #wsite-search-sidebar.sidebar-expanded:before {
-    content: "CLOSE \25b4";
+    content: 'CLOSE \25b4';
   }
   #wsite-search-header h2 {
     width: 100%;
