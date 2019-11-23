@@ -12,22 +12,21 @@ class Blocker {
     // rotate(PI/this.w/2);
     image(meteorsprite, this.x, this.y, this.w, this.h);
   }
-  
-  toucheschar(other){
-  //Collision test, call using 'name'.toucheschar
-  let d = dist(this.x, this.y, other.x, other.y);
-  if (d < this.w/3 + other.csizex/3 ){
-     return true; 
+
+  toucheschar(other) {
+    //Collision test, call using 'name'.toucheschar
+    let d = dist(this.x, this.y, other.x, other.y);
+    if (d < this.w / 3 + other.csizex / 3) {
+      return true;
     } else {
-    return false; 
+      return false;
     }
   }
-  
-  move(){
-  //Movement, moving left at a rate of 1 unit
-  if (character.startgame == true) {
-    this.x -= 1;  
-  }
-  }
 
+  move() {
+    //Movement, moving left at a rate of 1 unit
+    if (character.startgame == true) {
+      this.x -= 1;
+    }
+  }
 }
