@@ -1,9 +1,7 @@
 let Bullets = [];
 let Bullet;
 let auto = false;
-let bulletspeed = 15;
-let akbutton;
-let p90button;
+let bulletspeed = 7;
 let morebullet;
 let canvas;
 let fippsfont;
@@ -22,36 +20,12 @@ function preload() {
   backgroundpic = loadImage('assets/gamebg.png');
 }
 function setup() {
-  canvas = createCanvas(1700, 1040);
-  canvas.position(0, 0);
-  canvas.class('rpgui-container framed-golden');
-  canvas.style('image-rendering', 'pixelated');
+  canvas = createCanvas(1900, 1040);
   //Summon player
   Player = new Player(0, 0, 50, 50);
-  //Shop Expensive to cheap excluding bullets
-  morebullet = createButton('BUY 50 BULLET $30');
-  morebullet.class('rpgui-button');
-  morebullet.style('image-rendering', 'pixelated');
-  morebullet.style('font-family', 'Minecraft');
-  morebullet.style('font-size', 'smaller');
-  morebullet.position(1780, 950);
-  akbutton = createButton('UPGRADE TO AK $100');
-  akbutton.class('rpgui-button');
-  akbutton.style('image-rendering', 'pixelated');
-  akbutton.style('font-family', 'Minecraft');
-  akbutton.style('font-size', 'smaller');
-  akbutton.position(1715, 20);
-  //Cost module Links to individual functions
-  if (Money >= 100) {
-    akbutton.mouseReleased(initialupgrade);
-  }
-  if (Money >= 50) {
-    morebullet.mouseReleased(addbullet);
-  }
 }
 
 function draw() {
-  print(bulletspeed);
   background(backgroundpic);
   //Timer module
   if (timer >= bulletspeed) {
@@ -92,7 +66,7 @@ function draw() {
   fill(255);
   textFont(fippsfont);
   textSize(70);
-  text(Player.ammo, 50, 130);
+  text(Player.ammo - 1, 50, 130);
   text(Money, 50, 250);
   pop();
   // Character movement
@@ -108,29 +82,4 @@ function mouseReleased() {
   if (mouseButton == LEFT) {
     auto = false;
   }
-}
-
-function initialupgrade() {
-  bulletspeed = 10;
-  Money -= 100;
-  akbutton.remove();
-  p90button = createButton('UPGRADE TO P90 $200');
-  p90button.class('rpgui-button');
-  p90button.style('image-rendering', 'pixelated');
-  p90button.style('font-family', 'Minecraft');
-  p90button.style('font-size', 'smaller');
-  p90button.position(1715, 20);
-  if (Money >= 200) {
-    p90button.mouseReleased(P90);
-  }
-}
-
-function P90() {
-  bulletspeed = 5;
-  Money -= 200;
-  p90button.remove();
-}
-function addbullet() {
-  Money -= 50;
-  Player.ammo += 50;
 }
